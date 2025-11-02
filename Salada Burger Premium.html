@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salada Burger Premium - Restaurante Prato Rápido</title>
+    <link rel="stylesheet" href="Estilo Comidas.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="shortcut icon" href="imagens/prato rapido.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+    <a href="index.html" class="logo-link">
+        <img src="imagens/prato rapido.png" alt="Logo Prato Rápido" class="logo">
+    </a>
+    <div class="header-container">
+        
+        <h1>🍽️Prato Rápido</h1>
+    </div>
+</header>
+
+    <main>
+        <section class="dish-section">
+            <div class="dish-image">
+                <img src="imagens/Salada Burger Premium.png" alt="Salada Burger Premium">
+            </div>
+
+            <div class="dish-content">
+                <h2>Salada Burger Premium</h2>
+                <p class="price">R$ 32,90</p>
+                <p>
+                    Um dos clássicos irresistíveis da culinária fast-food, esse sanduíche combina suculência, crocância e sabores intensos para satisfazer qualquer fome. O <strong>Salada Burger Premium</strong> traz o hambúrguer de carne suculento, grelhado na perfeição para realçar o sabor defumado e macio da carne, com um toque de tempero que faz cada mordida uma explosão de prazer. As folhas de salada adicionam aquela crocância que eleva o burger a outro nível, enquanto o queijo derretido envolve tudo com cremosidade irresistível.
+                </p>
+                <p>
+                    A alface em dobro totalmente fresca e crocante, junto com o tomate suculento e maduro, trazem um contraste refrescante e leve, equilibrando os sabores ricos. Finalizando com maionese cremosa que une todos os ingredientes, criando uma harmonia perfeita no pão macio e levemente tostado. Esse burger é ideal para quem busca uma refeição indulgente, rápida e cheia de sabor, perfeita para um lanche poderoso ou uma refeição casual.
+                </p>
+                <p>
+                    No <strong>Prato Rápido</strong>, tudo é preparado com ingredientes premium e frescos, garantindo o autêntico sabor de um burger artesanal, com aquele toque gourmet que todo mundo deseja.
+                </p>
+            </div>
+        </section>
+
+        <div class="reader-container">
+            <button id="reader-btn">🔊 Leitor de Tela</button>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Restaurante Prato Rápido — Alimentação saudável com sabor de verdade.
+    </footer>
+
+    <script>
+        const readerBtn = document.getElementById("reader-btn");
+        readerBtn.addEventListener("click", () => {
+            const texto = `Salada Burger Premium. Preço: trinta e dois reais e noventa centavos.
+            Ingredientes: pão, hambúrguer de carne, bacon, queijo, alface, tomate e maionese.
+            Sanduíche premium e suculento preparado no restaurante Prato Rápido.`;
+            const speech = new SpeechSynthesisUtterance(texto);
+            speech.lang = "pt-BR";
+            window.speechSynthesis.speak(speech);
+        });
+    </script>
+
+</body>
+</html>

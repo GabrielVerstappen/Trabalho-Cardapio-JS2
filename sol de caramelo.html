@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sol de Caramelo - Restaurante Prato Rápido</title>
+    <link rel="stylesheet" href="Estilo Comidas.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="shortcut icon" href="imagens/prato rapido.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+    <a href="index.html" class="logo-link">
+        <img src="imagens/prato rapido.png" alt="Logo Prato Rápido" class="logo">
+    </a>
+    <div class="header-container">
+        <h1>🍽️Prato Rápido</h1>
+    </div>
+</header>
+
+
+    <main>
+        <section class="dish-section">
+            <div class="dish-image">
+                <img src="imagens/sol de caramelo.png" alt="Sol de Caramelo">
+            </div>
+
+            <div class="dish-content">
+                <h2>Sol de Caramelo</h2>
+                <p class="price">R$ 13,90</p>
+                <p>
+                Clássico, delicado e irresistível, o <strong>Sol de Caramelo</strong> é a sobremesa perfeita para quem aprecia sabores tradicionais com um toque de sofisticação. Com textura cremosa e calda dourada, esse pudim encanta pelo visual e conquista pelo sabor.
+                </p>
+                <p>
+                    Preparado com leite condensado, ovos e leite integral, o pudim ganha sua identidade única com a calda de caramelo levemente tostada, que escorre pelas laterais e se acumula na base, criando um contraste visual e gustativo marcante.
+                </p>
+                <p>
+                    No <strong>Prato Rápido</strong>, cada sobremesa é feita com ingredientes frescos e sem conservantes, garantindo autenticidade, qualidade e aquele gostinho caseiro que faz toda a diferença.
+                </p>
+
+            </div>
+        </section>
+
+        <div class="reader-container">
+            <button id="reader-btn">🔊 Leitor de Tela</button>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Restaurante Prato Rápido — Alimentação saudável com sabor de verdade.
+    </footer>
+
+    <script>
+        const readerBtn = document.getElementById("reader-btn");
+        readerBtn.addEventListener("click", () => {
+            const texto = `Sol de Caramelo. Preço: treze reais e noventa centavos. Ingredientes: leite condensado, leite integral, ovos e açúcar. Sobremesa cremosa e tradicional, servida gelada com calda de caramelo brilhante escorrendo pelas laterais. Preparada com ingredientes naturais no restaurante Prato Rápido.`;
+            const speech = new SpeechSynthesisUtterance(texto);
+            speech.lang = "pt-BR";
+            window.speechSynthesis.speak(speech);
+        });
+    </script>
+
+</body>
+</html>

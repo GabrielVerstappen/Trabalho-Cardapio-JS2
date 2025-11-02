@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doce de Harmonia - Restaurante Prato Rápido</title>
+    <link rel="stylesheet" href="Estilo Comidas.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="shortcut icon" href="imagens/prato rapido.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+    <a href="index.html" class="logo-link">
+        <img src="imagens/prato rapido.png" alt="Logo Prato Rápido" class="logo">
+    </a>
+    <div class="header-container">
+        <h1>🍽️Prato Rápido</h1>
+    </div>
+</header>
+
+
+    <main>
+        <section class="dish-section">
+            <div class="dish-image">
+                <img src="imagens/Doce Harmonia.png" alt="Doce de Harmonia">
+            </div>
+
+            <div class="dish-content">
+                <h2>Doce de Harmonia</h2>
+                <p class="price">R$ 14,90</p>
+                <p>
+                    Elegante, cremosa e cheia de contrastes, a <strong>Doce de Harmonia</strong> é a escolha perfeita para quem busca uma sobremesa sofisticada e marcante. Composta por três camadas harmoniosas — Sorvete de Creme, Sorvete de Morango e Cobertura de Nutella — ela encanta pelo visual e surpreende no sabor.
+                </p>
+                <p>
+                    A suavidade da base branca se une à acidez vibrante da camada vermelha e ao toque intenso do chocolate, criando uma experiência sensorial única. Servida bem gelada e finalizada com um morango açucarado na borda da taça, essa sobremesa é ideal para momentos especiais ou para dar um toque gourmet ao seu dia.
+                </p>
+                <p>
+                    No <strong>Prato Rápido</strong>, cada sobremesa é preparada com ingredientes frescos e selecionados, garantindo qualidade, sabor e uma apresentação impecável.
+                </p>
+
+
+            </div>
+        </section>
+
+        <div class="reader-container">
+            <button id="reader-btn">🔊 Leitor de Tela</button>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Restaurante Prato Rápido — Alimentação saudável com sabor de verdade.
+    </footer>
+
+    <script>
+        const readerBtn = document.getElementById("reader-btn");
+        readerBtn.addEventListener("click", () => {
+            const texto = `Doce de Harmonia. Preço: quatorze reais e noventa centavos. Ingredientes: Sorvete de Creme, Sorvete de Morango e Cobertura de Nutella. Sobremesa elegante e cremosa, servida em taça com três camadas harmoniosas. Decorada com morango açucarado na borda. Preparada com ingredientes naturais no restaurante Prato Rápido.`;
+            const speech = new SpeechSynthesisUtterance(texto);
+            speech.lang = "pt-BR";
+            window.speechSynthesis.speak(speech);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executivo Bife Grelhado - Prato Rápido</title>
+    <link rel="stylesheet" href="Estilo Comidas.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="shortcut icon" href="imagens/prato rapido.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+    <a href="index.html" class="logo-link">
+        <img src="imagens/prato rapido.png" alt="Logo Prato Rápido" class="logo">
+    </a>
+    <div class="header-container">
+        <h1>🍽️Prato Rápido</h1>
+    </div>
+</header>
+
+
+    <main>
+        <section class="dish-section">
+            <div class="dish-image">
+                <img src="imagens/arroz feijao carne e fritas messa.png"
+                    alt="Prato com arroz, feijão, carne e batata frita">
+            </div>
+
+            <div class="dish-content">
+                <h2>Executivo Bife Grelhado</h2>
+                <p class="price">R$ 28,90</p>
+                <p>
+                    Um dos clássicos da culinária brasileira, esse prato combina o sabor e a energia que você precisa
+                    para o dia a dia.
+                    O arroz soltinho e o feijão bem temperado formam a base perfeita para o suculento bife grelhado,
+                    preparado no ponto ideal
+                    para realçar o sabor da carne. As batatas fritas crocantes completam a refeição, trazendo aquele
+                    toque irresistível que
+                    agrada a todos os paladares.
+                </p>
+                <p>
+                    Além de ser uma combinação equilibrada e nutritiva, o famoso “arroz com feijão” é considerado um
+                    símbolo da gastronomia brasileira,
+                    presente nas mesas de norte a sul do país. Essa dupla fornece um ótimo equilíbrio de proteínas,
+                    fibras e energia, sendo ideal para
+                    quem busca praticidade sem abrir mão do sabor caseiro.
+                </p>
+                <p>
+                    No <strong>Prato Rápido</strong>, esse prato é preparado com ingredientes frescos e selecionados,
+                    garantindo o sabor de comida feita
+                    na hora, com aquele toque de casa que todo mundo adora.
+                </p>
+            </div>
+        </section>
+
+        <div class="reader-container">
+            <button id="reader-btn">🔊 Leitor de Tela</button>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Restaurante Prato Rápido — Sabor e praticidade no seu dia a dia.
+    </footer>
+
+    <script>
+        const readerBtn = document.getElementById("reader-btn");
+        readerBtn.addEventListener("click", () => {
+            const texto = `Executivo Bife Grelhado. Preço: vinte e oito reais e noventa centavos.
+            Ingredientes: arroz, feijão, carne grelhada e batata frita.
+            Um clássico brasileiro com sabor caseiro e ingredientes frescos preparados no restaurante Prato Rápido.`;
+            const speech = new SpeechSynthesisUtterance(texto);
+            speech.lang = "pt-BR";
+            window.speechSynthesis.speak(speech);
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executivo Bife Fit - Restaurante Prato Rápido</title>
+    <link rel="stylesheet" href="Estilo Comidas.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="shortcut icon" href="imagens/prato rapido.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+    <a href="index.html" class="logo-link">
+        <img src="imagens/prato rapido.png" alt="Logo Prato Rápido" class="logo">
+    </a>
+    <div class="header-container">
+        <h1>🍽️Prato Rápido</h1>
+    </div>
+</header>
+
+
+    <main>
+        <section class="dish-section">
+            <div class="dish-image">
+                <img src="imagens/arroz feijao carne e fritas saladas.png" alt="Executivo Bife Fit com arroz, feijão, carne grelhada e batata frita">
+            </div>
+
+            <div class="dish-content">
+                <h2>Executivo Bife Fit</h2>
+                <p class="price">R$ 34,90</p>
+                <p>
+                    Um dos clássicos da culinária brasileira, esse prato combina sabor, crocância e equilíbrio para o seu dia a dia. O <strong>Executivo Bife Fit</strong> traz o bife grelhado suculento, preparado no ponto ideal para realçar o sabor da carne, com marcas de chapa que deixam tudo mais apetitoso. As batatas fritas crocantes entram em cena com aquele toque dourado e irresistível que todo mundo ama, enquanto a farofa temperada com ervas dá um sabor caseiro e leve.
+                </p>
+                <p>
+                    A salada fresca com alface americana, tomate suculento e pepino crocante completa a refeição, trazendo frescor e nutrientes sem pesar. Além de ser uma combinação prática e nutritiva, esse prato é ideal para quem busca uma refeição completa, saborosa e equilibrada, perfeita para o almoço corrido ou um jantar leve.
+                </p>
+                <p>
+                    No Prato Rápido, tudo é feito com ingredientes frescos e selecionados, garantindo o sabor de comida feita na hora, com aquele toque acolhedor de casa que todo mundo adora.
+                </p>
+            </div>
+        </section>
+
+        <div class="reader-container">
+            <button id="reader-btn">🔊 Leitor de Tela</button>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Restaurante Prato Rápido — Alimentação saudável com sabor de verdade.
+    </footer>
+
+    <script>
+        const readerBtn = document.getElementById("reader-btn");
+        readerBtn.addEventListener("click", () => {
+            const texto = `Executivo Bife Fit. Preço: trinta e quatro reais e noventa centavos.
+            Ingredientes: arroz, feijão, carne grelhada, batata frita, alface, tomate e pepino.
+            Refeição equilibrada e saborosa preparada no restaurante Prato Rápido.`;
+            const speech = new SpeechSynthesisUtterance(texto);
+            speech.lang = "pt-BR";
+            window.speechSynthesis.speak(speech);
+        });
+    </script>
+
+</body>
+</html>

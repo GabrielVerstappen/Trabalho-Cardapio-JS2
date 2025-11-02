@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suco de Maçã Premium - Restaurante Prato Rápido</title>
+    <link rel="stylesheet" href="Estilo Comidas.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="shortcut icon" href="imagens/prato rapido.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+    <a href="index.html" class="logo-link">
+        <img src="imagens/prato rapido.png" alt="Logo Prato Rápido" class="logo">
+    </a>
+    <div class="header-container">
+        <h1>🍽️Prato Rápido</h1>
+    </div>
+</header>
+
+
+    <main>
+        <section class="dish-section">
+            <div class="dish-image">
+                <img src="imagens/suco de maça premium.png" alt="Suco de Maçã Premium">
+            </div>
+
+            <div class="dish-content">
+                <h2>Suco de Maçã Premium</h2>
+                <p class="price">R$ 12,90</p>
+                <p>
+                Leve, suave e naturalmente adocicado, o <strong>Suco de Maçã Premium</strong> é a escolha perfeita para quem busca uma bebida refrescante e equilibrada. Preparado com maçãs frescas e selecionadas, esse suco traz uma textura delicada e uma coloração dourada suave que encanta pelo visual e pelo sabor.
+                </p>
+                <p>
+                    Cada gole revela o dulçor natural da fruta, com um toque sutil de acidez que torna a experiência ainda mais agradável. Servido gelado e finalizado com uma fatia de maçã na borda do copo, o suco é ideal para acompanhar refeições leves ou ser apreciado como uma pausa saudável e saborosa ao longo do dia.
+                </p>
+                <p>
+                    No <strong>Prato Rápido</strong>, cada suco é feito com frutas frescas e sem conservantes, garantindo o sabor autêntico e a qualidade que você merece.
+                </p>
+
+            </div>
+        </section>
+
+        <div class="reader-container">
+            <button id="reader-btn">🔊 Leitor de Tela</button>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Restaurante Prato Rápido — Alimentação saudável com sabor de verdade.
+    </footer>
+
+    <script>
+        const readerBtn = document.getElementById("reader-btn");
+        readerBtn.addEventListener("click", () => {
+            const texto = `Suco de Maçã Premium. Preço: doze reais e noventa centavos. Ingredientes: maçã fresca, água, açúcar e gelo. Bebida suave e adocicada, servida gelada com uma fatia de maçã na borda do copo. Preparado com frutas naturais no restaurante Prato Rápido.`;
+            const speech = new SpeechSynthesisUtterance(texto);
+            speech.lang = "pt-BR";
+            window.speechSynthesis.speak(speech);
+        });
+    </script>
+
+</body>
+</html>

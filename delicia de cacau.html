@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delícia de Cacau - Restaurante Prato Rápido</title>
+    <link rel="stylesheet" href="Estilo Comidas.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="shortcut icon" href="imagens/prato rapido.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+    <a href="index.html" class="logo-link">
+        <img src="imagens/prato rapido.png" alt="Logo Prato Rápido" class="logo">
+    </a>
+    <div class="header-container">
+        <h1>🍽️Prato Rápido</h1>
+    </div>
+</header>
+
+
+    <main>
+        <section class="dish-section">
+            <div class="dish-image">
+                <img src="imagens/Delícia de Cacau.png" alt="Delícia de Cacau">
+            </div>
+
+            <div class="dish-content">
+                <h2>Delícia de Cacau</h2>
+                <p class="price">R$ 14,90</p>
+                <p>
+                Uma sobremesa clássica e sofisticada, a <strong>Delícia de Cacau com Toque de Morango</strong> combina camadas intensas de bolo de chocolate com cobertura cremosa e textura macia. Cada fatia revela o equilíbrio perfeito entre o sabor profundo do cacau e a leveza da fruta fresca, criando uma experiência indulgente e memorável.
+                </p>
+                <p>
+                    A cobertura de chocolate brilhante envolve as camadas com suavidade, enquanto o morango fresco no topo adiciona um toque de cor, frescor e contraste ao conjunto. Ideal para quem busca uma sobremesa marcante, com visual refinado e sabor envolvente.
+                </p>
+                <p>
+                    No <strong>Prato Rápido</strong>, cada detalhe é pensado para oferecer qualidade e prazer em cada mordida. Ingredientes selecionados, preparo cuidadoso e apresentação impecável fazem dessa sobremesa uma escolha perfeita para encerrar qualquer refeição com estilo.
+                </p>
+
+
+            </div>
+        </section>
+
+        <div class="reader-container">
+            <button id="reader-btn">🔊 Leitor de Tela</button>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Restaurante Prato Rápido — Alimentação saudável com sabor de verdade.
+    </footer>
+
+    <script>
+        const readerBtn = document.getElementById("reader-btn");
+        readerBtn.addEventListener("click", () => {
+            const texto = `Delícia de Cacau. Preço: quatorze reais e noventa centavos.
+            Ingredientes: bolo de chocolate, recheio cremoso de cacau, cobertura de chocolate e morango fresco.
+            Sobremesa refinada e saborosa servida no restaurante Prato Rápido.
+`;
+            const speech = new SpeechSynthesisUtterance(texto);
+            speech.lang = "pt-BR";
+            window.speechSynthesis.speak(speech);
+        });
+    </script>
+
+</body>
+</html>

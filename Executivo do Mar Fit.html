@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executivo do Mar Fit - Restaurante Prato Rápido</title>
+    <link rel="stylesheet" href="Estilo Comidas.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="shortcut icon" href="imagens/prato rapido.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+    <a href="index.html" class="logo-link">
+        <img src="imagens/prato rapido.png" alt="Logo Prato Rápido" class="logo">
+    </a>
+    <div class="header-container">
+        <h1>🍽️Prato Rápido</h1>
+    </div>
+</header>
+
+
+    <main>
+        <section class="dish-section">
+            <div class="dish-image">
+                <img src="imagens/arroz, feijao, carne de peixe, fritas e salada.png"
+                    alt="Executivo Peixe Fit com arroz, feijão, carne grelhada e batata frita">
+            </div>
+
+            <div class="dish-content">
+                <h2>Executivo do Mar Fit</h2>
+                <p class="price">R$ 33,90</p>
+                <p>
+                    Uma explosão de sabores brasileiros, o <strong>Executivo do Mar Fit</strong> é a escolha perfeita
+                    para quem ama uma refeição reconfortante. O filé de peixe grelhado, suculento e no ponto ideal, traz
+                    marcas de chapa que destacam o sabor do mar. O arroz soltinho se une ao feijão carioca bem
+                    temperado, trazendo a essência das cozinhas caseiras. As batatas fritas crocantes adicionam um toque
+                    dourado e irresistível, enquanto a salada fresca com alface, tomate e pepino adiciona cor e frescor.
+                </p>
+                <p>
+                    Ideal para uma refeição nutritiva e cheia de energia, esse prato combina tradição e sabor em cada
+                    mordida. O peixe macio e os acompanhamentos clássicos criam uma experiência caseira que aquece a
+                    alma, perfeita para qualquer hora do dia.
+                </p>
+                <p>
+                    No <strong>Prato Rápido</strong>, tudo é feito com ingredientes frescos e selecionados, garantindo
+                    um sabor autêntico e caseiro. O Executivo do Mar é a celebração da culinária raiz, trazendo o
+                    conforto de uma comida de família com um toque único e irresistível.
+                </p>
+            </div>
+        </section>
+
+        <div class="reader-container">
+            <button id="reader-btn">🔊 Leitor de Tela</button>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Restaurante Prato Rápido — Alimentação saudável com sabor de verdade.
+    </footer>
+
+    <script>
+        const readerBtn = document.getElementById("reader-btn");
+        readerBtn.addEventListener("click", () => {
+            const texto = `Executivo do Mar Fit. Preço: trinta e dois reais e noventa centavos. Ingredientes: arroz, feijão carioca, filé de peixe grelhado, batata frita e salada fresca. Um clássico brasileiro com sabor caseiro e ingredientes frescos, preparado no restaurante Prato Rápido.`;
+            const speech = new SpeechSynthesisUtterance(texto);
+            speech.lang = "pt-BR";
+            window.speechSynthesis.speak(speech);
+        });
+    </script>
+
+</body>
+
+</html>

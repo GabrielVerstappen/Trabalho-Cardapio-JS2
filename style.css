@@ -1,0 +1,147 @@
+/* Estilo global */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(imagens/fundo.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #3b1b1b;
+    color: #eee;
+    line-height: 1.6;
+}
+
+/* Banner */
+header img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 4px solid #f1aa22;
+}
+
+/* Título principal */
+h1 {
+    display: inline-block;          
+    background-color: rgba(0, 0, 0, 0.793); 
+    padding: 10px 25px;              
+    border-radius: 12px;           
+    text-align: center;               
+    font-size: 3em;
+    margin: 40px auto 20px;          
+    color: #f1aa22;
+    font-weight: 700;
+    text-shadow: 0 2px 10px #f1aa22;
+}
+
+/* Grade de cardápio */
+.menu-grid {
+    display: grid;
+    gap: 40px;
+    padding: 20px 40px;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    max-width: 1400px;
+    margin: 0 auto;
+    
+}
+
+/* Card do prato */
+.menu-card {
+    background: linear-gradient(145deg, #1a1a1a, #121212);
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 255, 127, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 40px #f1aa22;
+}
+
+/* Imagem do prato */
+.menu-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: #1c1c1c;
+    border-bottom: 1px solid #f1aa22;
+}
+
+/* Conteúdo do card */
+.menu-content {
+    padding: 20px;
+}
+
+.menu-content h2 {
+    margin: 0 0 10px;
+    font-size: 1.6em;
+    color: #f1aa22;
+}
+
+.menu-content p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 12px;
+}
+
+.price {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 12px 0;
+}
+
+/* Botão */
+.menu-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background-color: #f1aa22;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 255, 127, 0.2);
+    cursor: url('imagens/pizzaaa.png'), pointer;
+}
+
+.menu-btn:hover {
+    background-color: #e5640b;
+    transform: scale(1.03);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #111;
+    color: #888;
+    font-size: 0.9em;
+    margin-top: 60px;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+    .menu-grid {
+        padding: 20px;
+        gap: 30px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+}

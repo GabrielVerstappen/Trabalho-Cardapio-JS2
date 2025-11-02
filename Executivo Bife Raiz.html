@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executivo Bife Raiz - Prato Rápido</title>
+    <link rel="stylesheet" href="Estilo Comidas.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="shortcut icon" href="imagens/prato rapido.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+    <a href="index.html" class="logo-link">
+        <img src="imagens/prato rapido.png" alt="Logo Prato Rápido" class="logo">
+    </a>
+    <div class="header-container">
+        <h1>🍽️Prato Rápido</h1>
+    </div>
+</header>
+
+
+    <main>
+        <section class="dish-section">
+            <div class="dish-image">
+                <img src="imagens/arroz, feijao, batata frita crocante, carne grelhada e legumes no vapor.png" alt="arroz, feijao, batata frita crocante, carne grelhada e legumes no vapor">
+            </div>
+
+            <div class="dish-content">
+                <h2>Executivo Bife Raiz</h2>
+                <p class="price">R$ 32,90</p>
+                <p>
+                Um clássico que aquece o coração e enche a barriga, o <strong>Executivo do Mar Raiz</strong> traz o sabor autêntico do dia a dia brasileiro. O filé de peixe grelhado suculento, com marcas de chapa que realçam seu sabor, vem acompanhado de arroz soltinho e feijão carioca bem temperado, direto da tradição das mesas caseiras. As batatas fritas crocantes adicionam aquele toque irresistível, enquanto os legumes cozidos no vapor — brócolis e cenoura — equilibram a refeição com frescor e cor.
+                </p>
+                <p>
+                    Perfeito para quem busca uma comida nutritiva e cheia de energia, esse prato combina o melhor da culinária raiz com a praticidade de um almoço completo. O peixe macio e os legumes trazem um conforto caseiro, ideal para recarregar as forças no meio do dia corrido.
+                </p>
+                <p>
+                    No <strong>Prato Rápido</strong>, tudo é preparado com ingredientes frescos e selecionados, garantindo o sabor de comida feita na hora. Com aquele gostinho de comida de família, o Executivo do Mar Raiz é a escolha certa para quem valoriza tradição sem abrir mão de um toque especial.
+                </p>
+            </div>
+        </section>
+
+        <div class="reader-container">
+            <button id="reader-btn">🔊 Leitor de Tela</button>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Restaurante Prato Rápido — Sabor e praticidade no seu dia a dia.
+    </footer>
+
+    <script>
+        const readerBtn = document.getElementById("reader-btn");
+        readerBtn.addEventListener("click", () => {
+            const texto = `Executivo Bife Raiz. Preço: trinta e dois reais e noventa centavos. Ingredientes: arroz, feijão carioca, bife grelhado, batata frita e legumes cozidos no vapor. Um clássico brasileiro com sabor caseiro e ingredientes frescos, preparado no restaurante Prato Rápido.`;
+            const speech = new SpeechSynthesisUtterance(texto);
+            speech.lang = "pt-BR";
+            window.speechSynthesis.speak(speech);
+        });
+    </script>
+
+</body>
+</html>
+
